@@ -1,3 +1,8 @@
+layout: post
+title: "Start/Stop Azure VMs during off-hours — The Logic App Solution"
+date: 2019-12-28 00:00:00 +1000
+categories: LogicApps VirtualMachine
+
 # Start/Stop Azure VMs during off-hours — The Logic App Solution
 
 Virtual machines in a Cloud are most of their time not productively and waiting for some jobs to do. Especially during off-hours when the offices are closed and the people are sleeping at their homes.
