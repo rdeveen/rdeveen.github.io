@@ -1,7 +1,9 @@
+---
 layout: post
 title: "Start/Stop Azure VMs during off-hours — The Logic App Solution"
 date: 2019-12-28 00:00:00 +1000
 categories: LogicApps VirtualMachine
+---
 
 # Start/Stop Azure VMs during off-hours — The Logic App Solution
 
