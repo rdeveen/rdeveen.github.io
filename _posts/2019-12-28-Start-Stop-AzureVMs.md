@@ -8,22 +8,25 @@ tag: Azure
 tag: Logic Apps
 tag: Virtual Machines
 tag: Automation
+excerpt_separator: <!--more-->
 ---
+Virtual machines in a cloud are most of their time not productively and waiting for some jobs to do. Especially during off-hours when the offices are closed and the people are sleeping at their homes.
 
-![Azure Logic App to Start an Azure Virtual Machine](/assets/images/AzureLogicApptoStartanAzureVirtualMachine.webp)
+<!--more-->
 
-Virtual machines in a Cloud are most of their time not productively and waiting for some jobs to do. Especially during off-hours when the offices are closed and the people are sleeping at their homes.
-
-Azure Virtual Machines have the capability to Auto-shutdown at a specific time of the day. This can be configured in the Azure Portal but there is no easy way to configure it to Auto-startup at a specific time of the day.
+Azure Virtual Machines have the capability to Auto-shutdown at a specific time of the day. This can be configured in the Azure Portal but there is no easy way to configure it to **Auto-startup** at a specific time of the day.
 
 ![Auto shutdown Azure Virtual Machine](/assets/images/AutoShutdown.webp)
 
 There is a very large and complex solution available from Microsoft to schedule [starting and stopping Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/automation/automation-solution-vm-management) based on a Azure Automation Account. Very nice solution but for my problem too complex and too much configuration to get it working.
 
 ## Azure Logic App Solution
-The Logic App is using the Recurrence trigger to start every day at (for example) 6:00 o’ clock.
+
+![Azure Logic App to Start an Azure Virtual Machine](/assets/images/AzureLogicApptoStartanAzureVirtualMachine.webp)
 
 ### Logic App Recurrence Trigger
+The Logic App is using the Recurrence trigger to start every day at (for example) 6:00 o’ clock.
+
 ![Logic App Recurrence Trigger](/assets/images/LogicAppRecurrenceTrigger.webp)
 
 ### Logic App HTTP action
