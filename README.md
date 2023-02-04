@@ -1,4 +1,4 @@
-
+<h1>Blog posts</h1>
 <ul>
   {% for post in site.posts %}
     <li>
@@ -8,6 +8,7 @@
   {% endfor %}
 </ul>
 
+<h2>Tags</h2>
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
   <ul>
