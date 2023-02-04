@@ -6,8 +6,6 @@ date: 2019-12-28 00:00:00 +1000
 categories: Azure
 ---
 
-# Start/Stop Azure VMs during off-hours — The Logic App Solution
-
 ![Azure Logic App to Start an Azure Virtual Machine](/assets/images/AzureLogicApptoStartanAzureVirtualMachine.webp)
 
 Virtual machines in a Cloud are most of their time not productively and waiting for some jobs to do. Especially during off-hours when the offices are closed and the people are sleeping at their homes.
@@ -28,7 +26,7 @@ The Logic App is using the Recurrence trigger to start every day at (for example
 There is a command to [start an Azure Virtual Machine](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachines/start) using the Azure REST API. This command can be triggered by a Logic App using the HTTP Action. The command to start a Virtual Machine is the following:
 
 ```
-https://management.azure.com/subscriptions/{{guid-of-the-subscription}}/resourceGroups/{{name-of-the-resource-group}}/providers/Microsoft.Compute/virtualMachines/{{name-of-the-vm}}/start?api-version=2019-03-01
+https://management.azure.com/subscriptions/[guid-of-the-subscription]/resourceGroups/[name-of-the-resource-group]/providers/Microsoft.Compute/virtualMachines/[name-of-the-vm]/start?api-version=2019-03-01
 ```
 Don't forget to set the Authentication to `Managed Identity`.
 
