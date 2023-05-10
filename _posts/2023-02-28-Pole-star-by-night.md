@@ -9,8 +9,6 @@ tags:
 excerpt_separator: <!--more-->
 ---
 
-# Poolstar by night
-
 ![Startrail by night](/assets/images/Pole-star-by-Night-RobertDeVeen.jpg)
 
 #### &copy; Robert de Veen

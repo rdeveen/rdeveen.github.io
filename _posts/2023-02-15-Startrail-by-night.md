@@ -9,8 +9,6 @@ tags:
 excerpt_separator: <!--more-->
 ---
 
-# Startrail by night
-
 ![Startrail by night](/assets/images/Startrail-by-night-RobertDeVeen-small.jpg)
 
 #### &copy; Robert de Veen
