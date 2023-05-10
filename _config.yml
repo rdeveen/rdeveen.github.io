@@ -1,19 +1,56 @@
-remote_theme: pages-themes/hacker@v0.2.0
+#remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: "mmistakes/minimal-mistakes@4.24.0" # https://github.com/mmistakes/minimal-mistakes
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
 
+whitelist:
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
 title: Robert de Veen.com
 description: Blogs and post from Robert de Veen.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rdeveen
-github_username:  rdeveen
+github_username: rdeveen
 
 # Build settings
-theme: minima 
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+words_per_minute: 200
+repository: rdeveen/rdeveen.github.io
+logo : "/assets/images/Robert-de-Veen-2022-Square.jpg"
 
-google_analytics: G-DFK4D43GS7
+# comments:
+#   provider: giscus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+#   giscus:
+#     repo_id: 1 # Shown during giscus setup at https://giscus.app
+#     category_name: 1 # Full text name of the category
+#     category_id: 1 # Shown during giscus setup at https://giscus.app
+#     discussion_term: 1 # "pathname" (default), "url", "title", "og:title"
+#     reactions_enabled: 1  # '1' for enabled (default), '0' for disabled
+#     theme: dark # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+
+atom_feed:
+  hide: true
+
+twitter:
+  username: rdeveen
+
+analytics:
+  provider: google-gtag # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id: G-DFK4D43GS7
+    anonymize_ip: true
+
+# google_analytics: G-DFK4D43GS7
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -34,3 +71,93 @@ google_analytics: G-DFK4D43GS7
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+# # Site Author
+# author:
+#   name: "Your Name"
+#   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+#   bio: "I am an **amazing** person."
+#   location: "The Netherlands"
+#   email:
+#   links:
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#       # url: "mailto:your.name@email.com"
+#     - label: "Website"
+#       icon: "fas fa-fw fa-link"
+#       # url: "https://your-website.com"
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       # url: "https://twitter.com/"
+#     - label: "Facebook"
+#       icon: "fab fa-fw fa-facebook-square"
+#       # url: "https://facebook.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       # url: "https://github.com/"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       # url: "https://instagram.com/"
+
+# # Site Footer
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       # url:
+#     - label: "Facebook"
+#       icon: "fab fa-fw fa-facebook-square"
+#       # url:
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       # url:
+#     - label: "GitLab"
+#       icon: "fab fa-fw fa-gitlab"
+#       # url:
+#     - label: "Bitbucket"
+#       icon: "fab fa-fw fa-bitbucket"
+#       # url:
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       # url:
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/

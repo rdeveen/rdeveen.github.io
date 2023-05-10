@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Startrail by night"
 author: Robert de Veen
 date: 2023-02-15 00:00:00 +1000
