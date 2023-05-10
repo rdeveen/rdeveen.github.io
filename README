@@ -1,0 +1,6 @@
+# https://www.robertdeveen.com
+## Run locally
+```
+bundle exec jekyll serve --baseurl="" --livereload --force_polling
+
+```
