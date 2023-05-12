@@ -16,9 +16,11 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
 title: Robert de Veen.com
-description: Blogs and post from Robert de Veen.
+subtitle: Version 2023.1
+description: Blogs and photos from Robert de Veen.
+name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.robertdeveen.com"
 twitter_username: rdeveen
 github_username: rdeveen
 
@@ -84,6 +86,7 @@ defaults:
       comments: true
       share: true
       related: true
+      show_date: true
 
 # # Site Author
 # author:
@@ -112,27 +115,15 @@ defaults:
 #       icon: "fab fa-fw fa-instagram"
 #       # url: "https://instagram.com/"
 
-# # Site Footer
-# footer:
-#   links:
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       # url:
-#     - label: "Facebook"
-#       icon: "fab fa-fw fa-facebook-square"
-#       # url:
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       # url:
-#     - label: "GitLab"
-#       icon: "fab fa-fw fa-gitlab"
-#       # url:
-#     - label: "Bitbucket"
-#       icon: "fab fa-fw fa-bitbucket"
-#       # url:
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       # url:
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: https://twitter.com/rdeveen
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rdeveen"
 
 # Archives
 #  Type
@@ -150,6 +141,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
