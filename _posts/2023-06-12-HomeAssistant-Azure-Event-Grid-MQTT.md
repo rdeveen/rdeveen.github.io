@@ -12,6 +12,8 @@ excerpt_separator: <!--more-->
 
 The [Azure Event Grid now supports MQTT](https://learn.microsoft.com/en-us/azure/event-grid/mqtt-overview) as a protocol for publishing events. This is great news for Home Assistant users as it allows us to connect Home Assistant to Azure Event Grid. This blog post will show you how to connect Home Assistant to Azure Event Grid using MQTT.
 
+<!--more-->
+
 ## Create an Azure Event Grid Namespace with MQTT enabled
 
 First we need to create a new Azure Event Grid namespace or use an existing one and **enable MQTT** on the namespace. See the [Azure documentation](https://learn.microsoft.com/en-us/azure/event-grid/create-view-manage-namespaces#enable-mqtt) for more information on how to do this.
