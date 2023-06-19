@@ -1,5 +1,6 @@
 #remote_theme: pages-themes/hacker@v0.2.0
 remote_theme: "mmistakes/minimal-mistakes@4.24.0" # https://github.com/mmistakes/minimal-mistakes
+
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
@@ -7,6 +8,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-archives
 
 whitelist:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
@@ -137,10 +139,10 @@ footer:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 
 # https://github.com/jekyll/jekyll-archives

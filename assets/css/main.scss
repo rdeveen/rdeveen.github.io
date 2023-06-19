@@ -1,0 +1,39 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@font-face {
+  font-family: "JungleMan";
+  src: url("/assets/fonts/JungleMan-Regulair.otf");
+  font-weight: normal;
+}
+
+.site-title {
+  font-family: "JungleMan";
+  font-size: 3em !important;
+  font-weight: normal !important;
+  line-height: 0.5em !important;
+  filter: drop-shadow(16px 16px 16px black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+  font-weight: lighter !important; 
+}
+
+h1 { 
+  font-size: 3em !important;
+  font-family: "JungleMan" !important;
+  filter: drop-shadow(16px 16px 16px black);
+}
+ 
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials

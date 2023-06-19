@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "Connect Home Assistant to Azure Event Grid MQTT Broker"
 author: Robert de Veen
 date: 2023-06-12 00:00:00 +1000
