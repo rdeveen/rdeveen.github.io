@@ -36,9 +36,9 @@ logo : "/assets/images/Robert-de-Veen-2022-Square.jpg"
 comments:
   provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   giscus:
-    repo_id: "R_kgDOI5Q97" # Shown during giscus setup at https://giscus.app
-    category_name: "Ideas" # Full text name of the category
-    category_id: "DIC_kwDOI5Q97M4CXUq3" # Shown during giscus setup at https://giscus.app
+    repo_id: "R_kgDOI5Q97A" # Shown during giscus setup at https://giscus.app
+    category_name: "Comments" # Full text name of the category
+    category_id: "DIC_kwDOI5Q97M4CXdZX" # Shown during giscus setup at https://giscus.app
     discussion_term: "title" # "pathname" (default), "url", "title", "og:title"
     reactions_enabled: '1' # '1' for enabled (default), '0' for disabled
     theme: "dark" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
