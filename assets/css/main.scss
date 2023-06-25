@@ -34,6 +34,11 @@ h1 {
   filter: drop-shadow(16px 16px 16px black);
 }
  
+.page__related-title {
+  font-size: 2em !important;
+  font-family: "JungleMan" !important;
+  filter: drop-shadow(16px 16px 16px black);
+}
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
