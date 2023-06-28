@@ -1,13 +1,46 @@
 ---
-layout: home
+layout: archive
 author_profile: true
----
-<h1>Blog posts</h1>
-<ul>
+title: Welcome to my website
+--- 
+ 
+<hr />
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
+  
+  {% if post.header.teaser %}
+    {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
+
+  {% if post.id %}
+    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% else %}
+    {% assign title = post.title %}
+  {% endif %}
+
+  <div class="{{ include.type | default: 'list' }}__item">
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+      {% if include.type == "grid" and teaser %}
+        <div class="archive__item-teaser">
+          <img src="{{ teaser | relative_url }}" alt="">
+        </div>
+      {% endif %}
+      <h1 class="archive__item-title no_toc" itemprop="headline">
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
+      </h1>
+      {% include page__meta.html type=include.type %}
+      {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt }}</p>{% endif %}
+    </article>
+  </div>
+
   {% endfor %}
-</ul>
+</div>
+
+<hr />
