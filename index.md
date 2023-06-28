@@ -1,5 +1,6 @@
 ---
-layout: archive
+layout: home
+author_profile: true
 ---
 <h1>Blog posts</h1>
 <ul>

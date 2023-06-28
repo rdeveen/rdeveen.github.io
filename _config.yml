@@ -31,7 +31,7 @@ github_username: rdeveen
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 words_per_minute: 200
 repository: rdeveen/rdeveen.github.io
-logo : "/assets/images/Robert-de-Veen-2022-Square.jpg"
+logo: "assets/images/Handtekening-R-Black-version2021.png"
 
 comments:
   provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -91,32 +91,44 @@ defaults:
       related: true
       show_date: true
 
-# # Site Author
-# author:
-#   name: "Your Name"
-#   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-#   bio: "I am an **amazing** person."
-#   location: "The Netherlands"
-#   email:
-#   links:
-#     - label: "Email"
-#       icon: "fas fa-fw fa-envelope-square"
-#       # url: "mailto:your.name@email.com"
-#     - label: "Website"
-#       icon: "fas fa-fw fa-link"
-#       # url: "https://your-website.com"
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       # url: "https://twitter.com/"
-#     - label: "Facebook"
-#       icon: "fab fa-fw fa-facebook-square"
-#       # url: "https://facebook.com/"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       # url: "https://github.com/"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       # url: "https://instagram.com/"
+# Site Author
+author:
+  name: Robert de Veen
+  avatar: "/assets/images/Robert-de-Veen-2022-Square.webp"
+  location: "The Netherlands"
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/rdeveen"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://robertdeveen.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rdeveen"
+  # avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  # bio: "I am an **amazing** person."
+  # location: "The Netherlands"
+  # email:
+  # links:
+  #   - label: "Email"
+  #     icon: "fas fa-fw fa-envelope-square"
+  #     url: "mailto:your.name@email.com"
+  #   - label: "Website"
+  #     icon: "fas fa-fw fa-link"
+  #     url: "https://your-website.com"
+  #   - label: "Twitter"
+  #     icon: "fab fa-fw fa-twitter-square"
+  #     url: "https://twitter.com/"
+  #   - label: "Facebook"
+  #     icon: "fab fa-fw fa-facebook-square"
+  #     url: "https://facebook.com/"
+  #   - label: "GitHub"
+  #     icon: "fab fa-fw fa-github"
+  #     url: "https://github.com/"
+  #   - label: "Instagram"
+  #     icon: "fab fa-fw fa-instagram"
+  #     url: "https://instagram.com/"
 
 # Site Footer
 footer:

@@ -1,6 +1,5 @@
 ---
-title: "Pole star by night"
-author: Robert de Veen
+title: Pole star by night
 date: 2023-02-28 00:00:00 +1000
 categories: Photography
 tags:
@@ -8,7 +7,7 @@ tags:
 excerpt_separator: <!--more-->
 ---
 
-![Startrail by night](/assets/images/Pole-star-by-Night-RobertDeVeen.jpg)
+![Startrail by night](/assets/images/Pole-star-by-Night-RobertDeVeen.jpg){:.image-popup href="/assets/images/Pole-star-by-Night-RobertDeVeen.jpg"}
 
 #### &copy; Robert de Veen
 
