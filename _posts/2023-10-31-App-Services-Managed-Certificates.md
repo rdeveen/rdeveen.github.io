@@ -11,13 +11,13 @@ excerpt_separator: <!--more-->
 
 An certificates in Azure App Services is bind to an host name, this can be an apex (or naked) domain (https://robertdeveen.com) or a subdomain (https://www.robertdeveen.com or https://subdomain.robertdeveen.com), or a combination of these two (for example one certificate for https://robertdeveen.com and https://www.robertdeveen.com).
 
-To create an App Services Managed Certificate there are two ways to create a certificate with bicep. One for a apex domain and one for an subdomain. The validation of the ownership of the domain is the main difference. To generate a certificate the certificate authority would like to validate that the domain you try to get a certificate for is your. That you are the owner of that domain name.
+To create an App Services Managed Certificate there are two ways to create a certificate with Bicep. One for a apex domain and one for an subdomain. The validation of the ownership of the domain is the main difference. To generate a certificate the certificate authority would like to validate that the domain you try to get a certificate for is yours. That you are the owner of that (sub)domain name.
 
-As a prerequisite you need to have an App Service Plan and an App Service with a custom domain ready. The web app does not have a valid certificate already configured.
+As a prerequisite you need to have an App Service Plan and an App Service or Function App with a custom domain ready. The web app does not have a valid certificate already configured.
 
 ## Create a Host Name binding without a certificate
 
-```bicep
+```Bicep
 resource hostNameBindingWithoutCertificate 'Microsoft.Web/sites/hostNameBindings@2022-03-01' = {
   name: '${webAppName}/${customHostname}'
   properties: {
@@ -34,7 +34,7 @@ resource hostNameBindingWithoutCertificate 'Microsoft.Web/sites/hostNameBindings
 
 ## Create a App Services Managed Certificate
 
-```bicep
+```Bicep
 resource certificate 'Microsoft.Web/certificates@2022-03-01' = {
   name: '${canonicalName}-certificate'
   location: location
@@ -53,8 +53,8 @@ resource certificate 'Microsoft.Web/certificates@2022-03-01' = {
 
 We need to use a module to enable the certificate on the host name, as Bicep/ARM forbids using resource with this same type-name combination twice in one deployment.
 
-```bicep
-module hostnameBindingWithCertificate './modules/hostname-binding.bicep' = {
+```Bicep
+module hostnameBindingWithCertificate './modules/hostname-binding.Bicep' = {
   name: '${customHostname}-hostnamebinding'
   params: {
     certificateThumbprint: certificate.outputs.thumbprint
@@ -64,9 +64,9 @@ module hostnameBindingWithCertificate './modules/hostname-binding.bicep' = {
 }
 ```
 
-### `./module/hostname-binding.bicep`
+### `./module/hostname-binding.Bicep`
 
-```bicep
+```Bicep
 resource hostNameBindingWithCertificate 'Microsoft.Web/sites/hostNameBindings@2022-03-01' = {
   name: '${webAppName}/${customHostname}'
   properties: {
