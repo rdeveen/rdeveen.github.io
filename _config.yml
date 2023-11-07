@@ -19,7 +19,7 @@ whitelist:
   - jekyll-gist
 
 title: Robert de Veen.com
-subtitle: Version 2023.2
+subtitle: Version 2023.3
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
