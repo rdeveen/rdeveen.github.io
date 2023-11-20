@@ -47,5 +47,9 @@ h1 {
   margin-right: 1rem !important;
 }
 
+.page, .archive {
+  padding-right: 0px !important;
+}
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials

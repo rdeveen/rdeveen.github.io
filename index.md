@@ -2,6 +2,11 @@
 layout: archive
 author_profile: true
 title: Welcome to my website
+excerpt: "This is a website for my research and personal teaching activities."
+header:
+  overlay_image: assets/images/Pole-star-by-Night-RobertDeVeen.jpg
+  overlay_filter: 0.2
+  caption: "Photo credit: [**Robert de Veen**](https://robertdeveen.com)"
 --- 
  
 <hr />
