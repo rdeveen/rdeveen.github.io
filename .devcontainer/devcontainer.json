@@ -5,17 +5,29 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
 	"features": {
-		"ghcr.io/devcontainers-community/npm-features/prettier:1": {}
+		"ghcr.io/devcontainers-community/npm-features/prettier:1": {},		
+		"azure-cli": "latest"
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [ 4000 ]
+	"forwardPorts": [
+		4000
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"davidanson.vscode-markdownlint",
+				"ms-azuretools.vscode-bicep"
+			]
+		}
+	},
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "jekyll --version"
+	"postCreateCommand": "jekyll --version && bundle install"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
