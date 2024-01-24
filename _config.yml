@@ -5,7 +5,7 @@ plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-archives
@@ -14,7 +14,7 @@ whitelist:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
 
@@ -33,8 +33,13 @@ words_per_minute: 200
 repository: rdeveen/rdeveen.github.io
 logo: "assets/images/Handtekening-R-Black-version2021.png"
 
-paginate: 5
-paginate_path: "/blog/page:num/"
+#paginate: 5 # Old paginate v1 setting
+paginate_path: "/blogs/:num/" # Old paginate v1 settings, but used in mmistakes/minimal-mistakes /_includes/paginator.html
+pagination:
+  enabled: true
+  per_page: 4
+  sort_reverse: true
+  permalink: "/blogs/:num/"
 
 comments:
   provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -103,6 +108,9 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/rdeveen"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/rdeveen/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://robertdeveen.com"
