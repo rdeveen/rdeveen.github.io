@@ -25,13 +25,17 @@ h3,
 h4,
 h5,
 h6 { 
-  font-weight: lighter !important; 
+  font-weight: lighter !important;
 }
 
 h1 { 
   font-size: 3em !important;
   font-family: "JungleMan" !important;
   filter: drop-shadow(16px 16px 16px black);
+}
+
+h1 a{
+  text-decoration: none !important;
 }
  
 .page__related-title {
