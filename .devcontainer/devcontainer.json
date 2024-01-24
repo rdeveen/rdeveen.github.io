@@ -27,7 +27,7 @@
 	},
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "jekyll --version && bundle install"
+	"postCreateCommand": "bundle exec jekyll serve --force_polling --incremental"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

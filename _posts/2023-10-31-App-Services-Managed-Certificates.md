@@ -8,7 +8,7 @@ tags:
 excerpt_separator: <!--more-->
 ---
 
-# Create a (free!) App Services Managed Certificate with Bicep
+## Create a (free!) App Services Managed Certificate with Bicep
 
 An certificates in Azure App Services is bind to an host name, this can be an apex (or naked) domain (<https://robertdeveen.com>) or a subdomain (<https://www.robertdeveen.com> or <https://subdomain.robertdeveen.com>), or a combination of these two (for example one certificate for <https://robertdeveen.com> and <https://www.robertdeveen.com>).
 
