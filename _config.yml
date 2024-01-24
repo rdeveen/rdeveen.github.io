@@ -19,7 +19,7 @@ whitelist:
   - jekyll-gist
 
 title: Robert de Veen.com
-subtitle: Version 2023.3
+subtitle: Version 2024.1
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -32,6 +32,9 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon
 words_per_minute: 200
 repository: rdeveen/rdeveen.github.io
 logo: "assets/images/Handtekening-R-Black-version2021.png"
+
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 comments:
   provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
