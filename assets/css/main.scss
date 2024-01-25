@@ -46,14 +46,15 @@ h1 a{
 
 .site-logo {
   border: 1px solid #51555d;
-  padding: 5px; 
-  margin-left: 1rem !important;
+  padding: 5px;  
   margin-right: 1rem !important;
 }
 
 .page, .archive {
   padding-right: 0px !important;
 }
+
+$caption-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
