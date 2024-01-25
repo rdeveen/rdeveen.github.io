@@ -7,6 +7,9 @@ tags:
   - Bicep
   - GitHub
 excerpt_separator: <!--more-->
+header:
+  overlay_image: ./assets/images/Sparrow-2024-Robert-de-Veen.jpg
+  caption: "Photo credit: [**Robert de Veen**](https://robertdeveen.com)"
 ---
 
 Linters are a very powerfull tool to validate if your source code is correct. With the new `az bicep lint --file $file` command you can validate if your Bicep and Bicepparam files are correct. This command is available in the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/bicep?view=azure-cli-latest#az-bicep-lint) and can be used in a GitHub Action.
