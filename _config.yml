@@ -23,7 +23,7 @@ subtitle: Version 2024.1
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://robertdeveen.com
+url: https://www.robertdeveen.com
 twitter_username: rdeveen
 github_username: rdeveen
 
@@ -113,7 +113,7 @@ author:
       url: "https://www.linkedin.com/in/rdeveen/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://robertdeveen.com"
+      url: "https://www.robertdeveen.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rdeveen"
@@ -150,6 +150,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rdeveen"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/rdeveen/"
 
 # Archives
 #  Type
