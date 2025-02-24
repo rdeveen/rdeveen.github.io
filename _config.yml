@@ -19,12 +19,12 @@ whitelist:
   - jekyll-gist
 
 title: Robert de Veen.com
-subtitle: Version 2024.1
+subtitle: Version 2024.2
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.robertdeveen.com
-twitter_username: rdeveen
+# twitter_username: rdeveen
 github_username: rdeveen
 
 # Build settings
@@ -54,8 +54,8 @@ comments:
 atom_feed:
   hide: true
 
-twitter:
-  username: rdeveen
+# twitter:
+#   username: rdeveen
 
 analytics:
   provider: google-gtag # false (default), "google", "google-universal", "google-gtag", "custom"
@@ -89,14 +89,23 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      show_date: true
+  - scope:
+      path: ""
+      type: "albums" # see: collections
+    values:
+      layout: "album"
+      author_profile: true 
+      comments: true
+      share: true
       show_date: true
 
 # Site Author
@@ -105,9 +114,9 @@ author:
   avatar: "/assets/images/Robert-de-Veen-2022-Square.webp"
   location: "The Netherlands"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/rdeveen"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/rdeveen"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/rdeveen/"
@@ -144,9 +153,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: https://twitter.com/rdeveen
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: https://twitter.com/rdeveen
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rdeveen"
@@ -182,3 +191,7 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+
+collections:
+  albums:
+    output: true

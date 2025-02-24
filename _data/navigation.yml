@@ -1,3 +1,5 @@
 main:
-  - title: "Posts"
+  - title: "Blog posts"
     url: /year-archive/
+  - title: "Photo albums"
+    url: /albums/

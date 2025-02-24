@@ -1,7 +1,0 @@
-# <https://robertdeveen.com>
-
-## Run locally on WSL
-
-```bash
-bundle exec jekyll serve --baseurl="" --livereload --force_polling
-```
