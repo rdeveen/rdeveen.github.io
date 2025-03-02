@@ -27,5 +27,11 @@ EOF
 ## Run locally on WSL
 
 ```bash
+bundle install
 bundle exec jekyll serve --baseurl="" --livereload --force_polling --no-watch
+
+or 
+
+sudo apt install jekyll
+jekyll serve --baseurl="" --livereload --force_polling --no-watch
 ```

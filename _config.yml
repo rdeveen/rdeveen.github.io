@@ -3,20 +3,22 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0" # https://github.com/mmistakes
 
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-archives
+  - flickr
 
 whitelist:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
+  - flickr
 
 title: Robert de Veen.com
 subtitle: Version 2024.2
@@ -51,8 +53,8 @@ comments:
     reactions_enabled: '1' # '1' for enabled (default), '0' for disabled
     theme: "dark" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
 
-atom_feed:
-  hide: true
+# atom_feed:
+#   hide: true
 
 # twitter:
 #   username: rdeveen
@@ -195,3 +197,16 @@ jekyll-archives:
 collections:
   albums:
     output: true
+
+flickr:
+  screen_name: "Robert de Veen"
+  api_key: d7658c0a97f18556e5ef93fbc2fa8ec1
+  api_secret: 1a0cf2794fd72fdf
+  shared_secret: 1a0cf2794fd72fdf
+  use_cache: true
+  cache_dir: _flickr_cache
+  generate_posts: true
+  generate_photosets:
+    - Rome
+    - Aapjes kijken
+    - Vogelvlucht
