@@ -35,3 +35,10 @@ or
 sudo apt install jekyll
 jekyll serve --baseurl="" --livereload --force_polling --no-watch
 ```
+
+Debugging:
+In Dev Container run:
+```bash
+rdbg --command --open -- bundle exec jekyll serve --baseurl="" --livereload --force_polling --no-watch
+```
+And start the debugger in VSCode.

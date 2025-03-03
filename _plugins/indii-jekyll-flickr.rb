@@ -40,13 +40,15 @@ module Jekyll
       # FlickRaw.api_key = site.config['flickr']['api_key']
       # FlickRaw.shared_secret = site.config['flickr']['api_secret']
 
-      flickr = Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
+      flickr = ::Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
 
       nsid = flickr.people.findByUsername(:username => site.config['flickr']['screen_name']).id
       flickr_photosets = flickr.photosets.getList(:user_id => nsid)
 
       flickr_photosets.each do |flickr_photoset|
-        photoset = Photoset.new(site, flickr_photoset, flickr)
+        if site.config['flickr']['generate_photosets'].include? flickr_photoset.title
+          photoset = Photoset.new(site, flickr_photoset, flickr)
+        end
       end
     end
   end
@@ -207,7 +209,7 @@ module Jekyll
     def gen_thumb_html
       content = ''
       if self.url_full and self.url_thumb
-        content = "<a href=\"#{self.url_full}\" data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" width=\"75\" height=\"75\" /></a>\n"
+        content = "<a href=\"#{self.url_full}\" data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" /></a>\n"
       end
       return content
     end
@@ -225,7 +227,7 @@ module Jekyll
   end
 
 
-  class PhotoPost
+  class PhotoPost < Jekyll::Page
     def initialize(site, base, dir, photo)
       name = photo.date[0..9] + '-photo-' + photo.slug + '.md'
 
@@ -265,7 +267,7 @@ module Jekyll
       Jekyll::flickr_setup(site)
       cache_dir = site.config['flickr']['cache_dir']
 
-      flickr = Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
+      flickr = ::Flickr.new(site.config['flickr']['api_key'], site.config['flickr']['api_secret'])
 
       file_photosets = Dir.glob(File.join(cache_dir, '*.markdown'))
       file_photosets.each_with_index do |file_photoset, pos|
@@ -316,8 +318,10 @@ module Jekyll
       Jekyll::flickr_setup(site)
       file_photoset = File.join(site.config['flickr']['cache_dir'], "#{@slug}.markdown")
       
-      flickr = Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
+      flickr = ::Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
+
       photoset = Photoset.new(site, file_photoset, flickr)
+
       return photoset.gen_html
     end
   end

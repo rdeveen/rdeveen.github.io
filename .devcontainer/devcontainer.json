@@ -24,7 +24,7 @@
 			"extensions": [
 				"GitHub.copilot",
 				"davidanson.vscode-markdownlint",
-				"ms-azuretools.vscode-bicep"
+				"KoichiSasada.vscode-rdbg"
 			]
 		}
 	},

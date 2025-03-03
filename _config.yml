@@ -205,7 +205,8 @@ flickr:
   shared_secret: 1a0cf2794fd72fdf
   use_cache: true
   cache_dir: _flickr_cache
-  generate_posts: true
+  size_thumb: Medium
+  generate_posts: false
   generate_photosets:
     - Rome
     - Aapjes kijken
