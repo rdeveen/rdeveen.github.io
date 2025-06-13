@@ -3,3 +3,5 @@ main:
     url: /year-archive/
   - title: "Photo albums"
     url: /albums/
+  - title: "Me"
+    url: /about/

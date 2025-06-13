@@ -21,7 +21,7 @@ whitelist:
   - flickr
 
 title: Robert de Veen.com
-subtitle: Version 2024.2
+subtitle: Version 2025.6
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -197,7 +197,8 @@ jekyll-archives:
 collections:
   albums:
     output: true
-
+    permalink: /albums/:name/
+ 
 flickr:
   screen_name: "Robert de Veen"
   api_key: d7658c0a97f18556e5ef93fbc2fa8ec1
