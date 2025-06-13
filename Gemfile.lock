@@ -119,7 +119,7 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-remote-theme
   jekyll-sitemap
-  rb-fsevent
+  rb-fsevent (~> 0.10, >= 0.10.3)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)

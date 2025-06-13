@@ -42,4 +42,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick"
 
-gem "rb-fsevent"
+gem "rb-fsevent", ">= 0.10.3", "~> 0.10"
