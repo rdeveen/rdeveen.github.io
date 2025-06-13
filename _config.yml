@@ -204,7 +204,7 @@ flickr:
   api_key: d7658c0a97f18556e5ef93fbc2fa8ec1
   api_secret: 1a0cf2794fd72fdf
   shared_secret: 1a0cf2794fd72fdf
-  use_cache: true
+  use_cache: false
   cache_dir: _flickr_cache
   size_thumb: Medium
   generate_posts: false
@@ -212,3 +212,7 @@ flickr:
     - Rome
     - Aapjes kijken
     - Vogelvlucht
+
+gist:
+  # By default, Jekyll Gist will make an HTTP call per Gist to retrieve the raw content of the Gist. 
+  noscript: false # default: true
