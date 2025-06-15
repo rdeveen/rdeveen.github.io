@@ -203,7 +203,6 @@ flickr:
   screen_name: "Robert de Veen"
   api_key: d7658c0a97f18556e5ef93fbc2fa8ec1
   api_secret: 1a0cf2794fd72fdf
-  shared_secret: 1a0cf2794fd72fdf
   use_cache: false
   cache_dir: _flickr_cache
   size_thumb: Medium
