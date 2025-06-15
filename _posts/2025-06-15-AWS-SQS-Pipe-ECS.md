@@ -1,5 +1,5 @@
 ---
-title: Using AWS SQS Pipes to send messages to ECS
+title: Using AWS SQS and EventBridge Pipes to send messages to ECS
 date: 2024-01-24 00:00:00 +1000
 categories: AWS
 description: "Learn how to use AWS SQS and EventBridge Pipes to send messages to ECS."
