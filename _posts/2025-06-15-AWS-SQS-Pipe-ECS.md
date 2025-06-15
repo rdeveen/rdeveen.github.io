@@ -1,5 +1,5 @@
 ---
-title: Using AWS SQS and EventBridge Pipes to send messages to ECS
+title: Using AWS SQS and Event Bridge Pipes to send messages to ECS
 date: 2024-01-24 00:00:00 +1000
 categories: AWS
 description: "Learn how to use AWS SQS and EventBridge Pipes to send messages to ECS."
@@ -7,7 +7,7 @@ tagline: "Are AWS SQS Pipes reliably to send messages to ECS tasks?"
 tags:
   - AWS
   - SQS
-  - EventBridge
+  - Event Bridge
   - Pipes
   - ECS
 excerpt_separator: <!--more-->
@@ -16,3 +16,5 @@ header:
   caption: "Photo credit: [**Robert de Veen**](https://www.robertdeveen.com)"
   show_overlay_excerpt: false
 ---
+
+Today I was working on a integration to process message from an AWS Simple Queueing Services (SQS) Queue to a backend services. The specifics of this backend services doesn't really matter for this post, the only thing relevant is that it using the old-school Windows Communication Framework (WCF). With a custom .NET application written in the beloved C# language, we can communicate with the backend. 
