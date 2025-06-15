@@ -18,3 +18,5 @@ header:
 ---
 
 Today I was working on a integration to process message from an AWS Simple Queueing Services (SQS) Queue to a backend services. The specifics of this backend services doesn't really matter for this post, the only thing relevant is that it using the old-school Windows Communication Framework (WCF). With a custom .NET application written in the beloved C# language, we can communicate with the backend. 
+
+This integration start with a third party putting a message on our queue. Because the amound of message we think this intergration would process we would like to make this integration serverless.
