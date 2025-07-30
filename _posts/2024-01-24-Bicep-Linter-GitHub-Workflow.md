@@ -24,7 +24,62 @@ When adding or removing a parameter from the Bicep template, I often forget to c
 
 ## The Bicep Linter GitHub Workflow file
 
-{% gist 66f66f32412e484bb3c76d7a4dd10ada bicep-linter.yml %}
+```yaml
+name: 🎗️ Bicep Linter
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited, ready_for_review]
+
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+  actions: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint Bicep and Bicepparam files
+    environment: AZURE
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Lint Bicep and Bicepparam files
+        run: |
+          az bicep install
+          success="true"
+
+          CHANGED_FOLDERS=$(git diff HEAD~1 --name-only | xargs dirname)
+          echo "📂 Changed folders:"
+          echo $CHANGED_FOLDERS
+
+          FILES=$(find $CHANGED_FOLDERS \( -name "*.bicep" -o -name "*.bicepparam" \))
+          echo "🔍 Files to lint:"
+          echo $FILES
+
+          for file in $FILES; do
+          { # 'try' block
+            echo "🎗️ Linting $file" && az bicep lint --file $file
+          } || { # 'catch' block
+            success="false"
+          }
+          done
+
+          if [ "$success" = "false" ]; then
+            echo "::error::❌ Linting of the Bicep files failed."
+            exit 1;
+          fi;
+```
 
 ### Checkout code
 
