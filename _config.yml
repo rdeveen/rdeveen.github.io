@@ -1,8 +1,8 @@
 #remote_theme: pages-themes/hacker@v0.2.0
-remote_theme: "mmistakes/minimal-mistakes@4.24.0" # https://github.com/mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.27.3" # https://github.com/mmistakes/minimal-mistakes
 
 plugins:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
   # - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate-v2
@@ -12,7 +12,7 @@ plugins:
   - flickr
 
 whitelist:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
   # - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate-v2
@@ -21,7 +21,7 @@ whitelist:
   - flickr
 
 title: Robert de Veen.com
-subtitle: Version 2025.6
+subtitle: Version 2025.10
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -220,3 +220,6 @@ flickr:
 gist:
   # By default, Jekyll Gist will make an HTTP call per Gist to retrieve the raw content of the Gist. 
   noscript: false # default: true
+
+sass:
+  quiet_deps: true    # Disable printing deprecation warnings to terminal
