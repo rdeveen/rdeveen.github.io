@@ -1,0 +1,15 @@
+---
+id: '10136252226'
+title: Ringstaartmaki
+slug: ringstaartmaki-10136252226
+date: '2013-10-07T11:44:11+00:00'
+description: ''
+tags:
+- Apenheul Apen Dieren
+- Apeldoorn
+- Gelderland
+- The Netherlands
+url_full: https://live.staticflickr.com/7320/10136252226_639e5d8ba0_h.jpg
+url_thumb: https://live.staticflickr.com/7320/10136252226_ce2afdfffd.jpg
+cache_file: _flickr_cache/aapjes-kijken/10136252226.markdown
+position: 11

@@ -1,0 +1,13 @@
+---
+id: '5254043393'
+title: Colosseum
+slug: colosseum-5254043393
+date: '2010-12-12T15:53:06+00:00'
+description: Amphitheatrum Flavium, Rome
+tags:
+- Italie
+- Rome
+url_full: https://live.staticflickr.com/5001/5254043393_59f7456301_h.jpg
+url_thumb: https://live.staticflickr.com/5001/5254043393_4f37cc3e8c.jpg
+cache_file: _flickr_cache/rome/5254043393.markdown
+position: 0

@@ -1,0 +1,13 @@
+---
+id: '37071464932'
+title: Fantôme de l'Himalaya
+slug: fantme-de-lhimalaya-37071464932
+date: '2017-09-15T15:25:00+00:00'
+description: |-
+  Vautour fauve (Gyps fulvus)
+  At Bioparc of Doué la Fontaine
+tags: []
+url_full: https://live.staticflickr.com/4410/37071464932_bdec79d264_h.jpg
+url_thumb: https://live.staticflickr.com/4410/37071464932_c6e44aa796.jpg
+cache_file: _flickr_cache/vogelvlucht/37071464932.markdown
+position: 33
