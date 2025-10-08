@@ -8,4 +8,4 @@ Gemfile.lock
 .bundle/
 vendor/
 
-_flickr_cache/*
+#_flickr_cache/*

@@ -1,0 +1,16 @@
+---
+id: '54841199195'
+title: Fallow Deer
+slug: fallow-deer-54841199195
+date: '2025-10-08T14:30:55+00:00'
+description: ''
+tags:
+- Fallow
+- Deer
+- AWD
+- Nature
+- Wildlife
+url_full: https://live.staticflickr.com/65535/54841199195_796167bb27_h.jpg
+url_thumb: https://live.staticflickr.com/65535/54841199195_887ababab6.jpg
+cache_file: _flickr_cache/fallow-deers/54841199195.markdown
+position: 7
