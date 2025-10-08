@@ -1,5 +1,6 @@
 ---
 layout: archive
+author_profile: true
 ---
 
 <marquee behavior="scroll" direction="left" scrollamount="15" class="marquee">
