@@ -1,5 +1,7 @@
 ##
 ## Embed Flickr photos in a Jekyll blog.
+## Original from: https://github.com/lawmurray/indii-jekyll-flickr
+## Fix: https://github.com/lawmurray/indii-jekyll-flickr/issues/1
 ##
 ## Copyright (C) 2015 Lawrence Murray, www.indii.org.
 ##
@@ -12,6 +14,9 @@ require 'flickr'
 require 'shellwords'
 
 module Jekyll
+
+  # Class variable to track if cache has been cleared in this session
+  @@cache_cleared = false
 
   def self.flickr_setup(site)
     # defaults
@@ -26,11 +31,13 @@ module Jekyll
     end
 
     if not site.config['flickr']['use_cache']
-      # clear any existing cache
+      # clear any existing cache only once per session
       cache_dir = site.config['flickr']['cache_dir']
 
-      if Dir.exist?(cache_dir)
+      if !@@cache_cleared && Dir.exist?(cache_dir)
+        puts "Clearing Flickr cache directory: #{cache_dir}"
         FileUtils.rm_rf(cache_dir)
+        @@cache_cleared = true
       end
       if !Dir.exist?(cache_dir)
         Dir.mkdir(cache_dir)
@@ -117,9 +124,11 @@ module Jekyll
 
     def gen_html
       content = ''
+      content = '<div id="gallery" class="container-fluid">'
       self.photos.each do |photo|
         content += photo.gen_thumb_html
       end
+      content += '</div>'
       return content
     end
   end
@@ -326,6 +335,11 @@ module Jekyll
     end
   end
 
+end
+
+# Reset the cache cleared flag at the start of each Jekyll build
+Jekyll::Hooks.register :site, :after_init do |site|
+  Jekyll.class_variable_set(:@@cache_cleared, false)
 end
 
 Liquid::Template.register_tag('flickr_photoset', Jekyll::FlickrPhotosetTag)
