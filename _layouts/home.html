@@ -50,3 +50,32 @@ layout: archive
 </div>
 
 {% include paginator.html %}
+
+<!-- Albums Section -->
+<div class="feature__wrapper">
+  <hr />
+  <h2 class="archive__subtitle">Photo Albums</h2>
+  <div class="entries-grid">
+    {% for album in site.albums limit:4 %}
+    <div class="grid__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        {% if album.header.teaser %}
+        <div class="archive__item-teaser">
+          <a href="{{ album.url | relative_url }}">
+            <img src="{{ album.header.teaser | relative_url }}" alt="{{ album.title | default: album.name }}">
+          </a>
+        </div>
+        {% endif %}
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+          <a href="{{ album.url | relative_url }}" rel="permalink">{{ album.title | default: album.name }}</a>
+        </h2>
+        <p class="archive__item-excerpt" itemprop="description">
+          {% if album.tagline %}{{ album.tagline }}{% endif %}
+          {% if album.location %}<br><i class="fas fa-map-marker-alt"></i> {{ album.location }}{% endif %}
+        </p>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
