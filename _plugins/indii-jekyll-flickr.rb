@@ -64,7 +64,7 @@ module Jekyll
   class Photoset
     attr_accessor :id, :title, :slug, :cache_dir, :cache_file, :photos, :flickr
 
-    def initialize(site, photoset, flickr)
+    def initialize(site, photoset, flickr, reverse_order = false)
       self.flickr = flickr
       self.photos = Array.new
       if photoset.is_a? String
@@ -72,7 +72,12 @@ module Jekyll
       else
         self.flickr_load(site, photoset)
       end
-      self.photos.sort! {|left, right| left.position <=> right.position}
+      
+      if reverse_order
+        self.photos.sort! {|left, right| right.position <=> left.position}
+      else
+        self.photos.sort! {|left, right| left.position <=> right.position}
+      end
     end
 
     def flickr_load(site, flickr_photoset)
@@ -324,12 +329,16 @@ module Jekyll
 
     def render(context)
       site = context.registers[:site]
+      page = context.registers[:page]
       Jekyll::flickr_setup(site)
       file_photoset = File.join(site.config['flickr']['cache_dir'], "#{@slug}.markdown")
       
       flickr = ::Flickr.new site.config['flickr']['api_key'], site.config['flickr']['api_secret']
 
-      photoset = Photoset.new(site, file_photoset, flickr)
+      # Check if reverse_order is set in the page's front matter
+      reverse_order = page['reverse_order'] || false
+
+      photoset = Photoset.new(site, file_photoset, flickr, reverse_order)
 
       return photoset.gen_html
     end
