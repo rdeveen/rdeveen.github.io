@@ -232,7 +232,10 @@ module Jekyll
     def gen_thumb_html
       content = ''
       if self.url_full and self.url_thumb
-        content = "<a href=\"#{self.url_full}\" data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" /></a>\n"
+        content = "<a href=\"#{self.url_full}\" title=\"#{self.title}\"  data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" /></a>\n"
+        # if self.title and self.title != ''
+        #   content += "<figcaption>#{self.title}</figcaption>\n"
+        # end
       end
       return content
     end

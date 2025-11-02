@@ -8,15 +8,15 @@ tags:
 output: true
 
 header:
-  overlay_image: https://live.staticflickr.com/65535/54896935600_b4a651b63c_o.jpg
+  overlay_image: https://live.staticflickr.com/65535/54897216900_2f8a6525ab_h.jpg
   caption: "Photo credit: [**Robert de Veen**](https://robertdeveen.com)"
   show_overlay_excerpt: false 
-  teaser: https://live.staticflickr.com/65535/54896850696_f8af8a5a96_o.jpg
+  teaser: https://live.staticflickr.com/65535/54897216900_c7cf6c3709.jpg
 
 --- 
 <style>
   .page__hero--overlay {
-      background-position: 0 25% !important;
+      background-position: 0 35% !important;
   }
 </style>
 
