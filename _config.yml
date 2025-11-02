@@ -21,7 +21,7 @@ whitelist:
   - flickr
 
 title: Robert de Veen.com
-subtitle: Version 2025.10
+subtitle: Version 2025.11
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog

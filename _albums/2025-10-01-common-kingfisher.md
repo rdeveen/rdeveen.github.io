@@ -1,7 +1,7 @@
 ---
 name: Common Kingfisher
 title: Common Kingfisher 
-date: 2025-10-01 00:00:00 +1000
+date: 2025-10-01 00:00:00 +0000
 categories: Photography
 tags:
   - Photography
