@@ -8,7 +8,7 @@ tags:
 - Ooievaar
 - Faro
 - Portugal
-url_full: ''
+url_full: https://live.staticflickr.com/5121/5327222618_da93d41932_o.jpg
 url_thumb: https://live.staticflickr.com/5121/5327222618_df3b25534f.jpg
 cache_file: _flickr_cache/vogelvlucht/5327222618.markdown
 position: 8

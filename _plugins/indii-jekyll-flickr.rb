@@ -26,6 +26,9 @@ module Jekyll
     if !site.config['flickr']['size_full']
       site.config['flickr']['size_full'] = 'Large'
     end
+    if !site.config['flickr']['size_small']
+      site.config['flickr']['size_small'] = 'Large'
+    end
     if !site.config['flickr']['size_thumb']
       site.config['flickr']['size_thumb'] = 'Large Square'
     end
@@ -166,6 +169,12 @@ module Jekyll
       # sizes request
       flickr_sizes = photoset.flickr.photos.getSizes(:photo_id => self.id)
       if flickr_sizes
+        # Find original sizes
+        size_original = flickr_sizes.find {|s| s.label == 'Original'}
+        if size_original
+          self.url_full = size_original.source
+        end
+        # Overwrite to full size (Large 1600 if available)
         size_full = flickr_sizes.find {|s| s.label == site.config['flickr']['size_full']}
         if size_full
           self.url_full = size_full.source

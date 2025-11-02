@@ -5,7 +5,7 @@ slug: roodborstje-5793569617
 date: '2011-06-03T16:47:01+00:00'
 description: ''
 tags: []
-url_full: ''
+url_full: https://live.staticflickr.com/5145/5793569617_026f181e45_o.jpg
 url_thumb: https://live.staticflickr.com/5145/5793569617_5400292127.jpg
 cache_file: _flickr_cache/vogelvlucht/5793569617.markdown
 position: 5

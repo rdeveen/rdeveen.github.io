@@ -5,7 +5,7 @@ slug: "-54759459164"
 date: '2025-09-01T19:43:15+00:00'
 description: ''
 tags: []
-url_full: ''
+url_full: https://live.staticflickr.com/65535/54759459164_99925e3847_o.jpg
 url_thumb: https://live.staticflickr.com/65535/54759459164_847377e5f6.jpg
 cache_file: _flickr_cache/vogelvlucht/54759459164.markdown
 position: 46

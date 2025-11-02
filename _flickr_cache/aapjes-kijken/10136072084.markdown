@@ -9,7 +9,7 @@ tags:
 - Apeldoorn
 - Gelderland
 - The Netherlands
-url_full: ''
+url_full: https://live.staticflickr.com/2884/10136072084_f21c4b982d_o.jpg
 url_thumb: https://live.staticflickr.com/2884/10136072084_2dc930beda.jpg
 cache_file: _flickr_cache/aapjes-kijken/10136072084.markdown
 position: 7
