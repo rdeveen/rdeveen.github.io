@@ -1,7 +1,7 @@
 ---
 id: '54897216700'
-title: _MG_9660.jpg
-slug: mg9660jpg-54897216700
+title: My First Common Kingfisher photo
+slug: my-first-common-kingfisher-photo-54897216700
 date: '2025-11-02T18:31:33+00:00'
 description: ''
 tags: []

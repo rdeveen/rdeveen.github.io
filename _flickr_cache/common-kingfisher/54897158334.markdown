@@ -1,7 +1,7 @@
 ---
 id: '54897158334'
-title: _MG_0152.jpg
-slug: mg0152jpg-54897158334
+title: Common kingfisher
+slug: common-kingfisher-54897158334
 date: '2025-11-02T18:31:47+00:00'
 description: ''
 tags:
