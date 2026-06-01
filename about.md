@@ -8,3 +8,5 @@ author_profile: true
 </marquee>
 
 ![Author of this blog](/assets/images/Robert-de-Veen-2022-Square.webp "Robert de Veen")
+
+I'm a passionate Azure Cloud Consultant, a C# developer, blogger and photographer.

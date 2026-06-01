@@ -21,7 +21,7 @@ whitelist:
   - flickr
 
 title: Robert de Veen.com
-subtitle: Version 2026.04
+subtitle: Version 2026.06
 description: Blogs and photos from Robert de Veen.
 name: Robert de Veen
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -42,6 +42,9 @@ pagination:
   per_page: 4
   sort_reverse: true
   permalink: "/blogs/:num/"
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
 
 comments:
   provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
