@@ -1,0 +1,17 @@
+---
+id: '55312572529'
+title: Huismus (Passer domesticus) - House Sparrow
+slug: huismus-passer-domesticus---house-sparrow-55312572529
+date: '2026-06-03T18:23:52+00:00'
+description: Een ouder voedt een jong huismus in het nest.
+tags:
+- Passer domesticus
+- Huismus
+- voedend
+- jong
+- vogel
+- Netherlands
+url_full: https://live.staticflickr.com/65535/55312572529_375106b2de_h.jpg
+url_thumb: https://live.staticflickr.com/65535/55312572529_1d1acfceda.jpg
+cache_file: _flickr_cache/vogelvlucht/55312572529.markdown
+position: 51

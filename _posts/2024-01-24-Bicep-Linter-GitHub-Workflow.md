@@ -1,8 +1,9 @@
 ---
 title: Lint your Bicep and Bicepparam files with GitHub Workflow
-date: 2024-01-24 00:00:00 +1000
+date: 2024-01-24
+last_modified_at: 2026-03-06
 categories: Azure
-tagline: "Linters are a very powerfull tool to validate if your code is correct."
+tagline: "Linters are a very powerful tool to validate if your code is correct."
 tags:
   - Azure
   - Bicep
@@ -14,16 +15,17 @@ header:
   show_overlay_excerpt: false
 ---
 
-Linters are a very powerfull tool to validate if your code is correct. With the new `az bicep lint --file $file` command you can validate if your Bicep and Bicepparam files are correct. This command is available in the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/bicep?view=azure-cli-latest#az-bicep-lint) and can be used in a GitHub Action.
+Linters are a very powerful tool to validate if your code is correct. With the new `az bicep lint --file $file` command you can validate if your Bicep and Bicepparam files are correct. This command is available in the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/bicep?view=azure-cli-latest#az-bicep-lint) and can be used in a GitHub Action.
 
 <!--more-->
 
 When changing the Bicep files in a pull request, you can use the `az bicep lint --file $file` command to validate the Bicep files. This command will validate the syntax of the Bicep files and will also validate if the resources are valid. This is a great way to validate your Bicep files before deploying them to Azure. 
 
-When adding or removing a parameter from the Bicep template, I often forget to change all the Bicepparam files and when deploying to the Production environment in Azure, the deployment wiil fail because the Bicepparam file isn't correct. To prevent this, I created a GitHub Workflow that will validate the Bicep and the Bicepparam files when a pull request is created or updated. This way, I can't forget to update the Bicepparam files.
+When adding or removing a parameter from the Bicep template, I often forget to change all the Bicepparam files and when deploying to the Production environment in Azure, the deployment will fail because the Bicepparam file isn't correct. To prevent this, I created a GitHub Workflow that will validate the Bicep and the Bicepparam files when a pull request is created or updated. This way, I can't forget to update the Bicepparam files.
 
 ## The Bicep Linter GitHub Workflow file
 
+{% raw %}
 ```yaml
 name: 🎗️ Bicep Linter
 
@@ -80,6 +82,7 @@ jobs:
             exit 1;
           fi;
 ```
+{% endraw %}
 
 ### Checkout code
 
