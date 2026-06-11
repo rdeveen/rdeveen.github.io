@@ -3,13 +3,9 @@
 {
 	"name": "Jekyll",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
 	"features": {
-		"ghcr.io/devcontainers-community/npm-features/prettier:1": {},		
-		"azure-cli": "latest",
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "latest"
-    }
+		"ghcr.io/devcontainers-community/npm-features/prettier:1": {}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -24,7 +20,8 @@
 			"extensions": [
 				"GitHub.copilot",
 				"davidanson.vscode-markdownlint",
-				"KoichiSasada.vscode-rdbg"
+				"KoichiSasada.vscode-rdbg",
+				"ginfuru.ginfuru-vscode-jekyll-syntax"
 			]
 		}
 	},
