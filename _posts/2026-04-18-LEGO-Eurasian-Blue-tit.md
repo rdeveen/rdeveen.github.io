@@ -20,6 +20,10 @@ What have I got sitting on my branch now?!
 
 <!--more-->
 
+![Love Birds](https://live.staticflickr.com/65535/55332444198_d81f0428bc_h.jpg "Love birds"){: .image-popup href="https://live.staticflickr.com/65535/55332444198_e9b7f07990_o.jpg"}
+
+![On Top](https://live.staticflickr.com/65535/55334655566_92663444b5_h.jpg "On top"){: .image-popup href="https://live.staticflickr.com/65535/55334655566_f9ebf14414_o.jpg"}>
+
 The LEGO version of the is from this [Rebrickable Eurasian Blue Tit - Cyanistes caeruleus](https://rebrickable.com/mocs/MOC-221381/BigJudge/eurasian-blue-tit-cyanistes-caeruleus/) MOC, the other one is real.
 
 <style>

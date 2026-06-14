@@ -3,13 +3,13 @@
 {
 	"name": "Jekyll",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
-	"features": {
-		"ghcr.io/devcontainers-community/npm-features/prettier:1": {}
-	},
+	"image": "mcr.microsoft.com/devcontainers/jekyll",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	// Features to add to the dev container. More info: https://containers.dev/features
+	"features": {
+    // https://github.com/devcontainers-community/npm-features/tree/main/src/prettier
+    "ghcr.io/devcontainers-community/npm-features/prettier": {}
+  },
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
@@ -27,7 +27,7 @@
 	},
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "bundle exec jekyll serve --force_polling --incremental"
+	"postCreateCommand": "bundle exec jekyll serve --force_polling --incremental --watch"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
