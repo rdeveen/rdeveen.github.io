@@ -1,6 +1,6 @@
 {
   "features": {
-    "ghcr.io/devcontainers-community/npm-features/prettier:1": {
+    "ghcr.io/devcontainers-community/npm-features/prettier": {
       "version": "1.1.0",
       "resolved": "ghcr.io/devcontainers-community/npm-features/prettier@sha256:41aca434d43373d78b276d3cd89ecdce960e0b618ff0ee59f2ecee0810dbabe9",
       "integrity": "sha256:41aca434d43373d78b276d3cd89ecdce960e0b618ff0ee59f2ecee0810dbabe9",
