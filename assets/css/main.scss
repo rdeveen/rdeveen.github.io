@@ -64,10 +64,18 @@ $caption-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
- 
+
 #gallery {
   column-count: 3;
   column-gap: 20px;
+
+  @media (max-width:1200px) {
+    column-count: 2;
+  }
+
+  @media (max-width:800px) {
+    column-count: 1;
+  }
 }
 
 #gallery > a > img {
@@ -79,16 +87,3 @@ $caption-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "
   transition: all 0.2s;
 }
 
-@media (max-width:1200px) {
-  #gallery {
-    column-count: 2;
-    column-gap: 20px;
-  }
-}
-
-@media (max-width:800px) {
-  #gallery {
-    column-count: 1;
-    column-gap: 20px;
-  }
-}
