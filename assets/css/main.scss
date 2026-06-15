@@ -69,21 +69,21 @@ $caption-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "
   column-count: 3;
   column-gap: 20px;
 
-  @media (max-width:1200px) {
+  > a > img {
+    width: 100%;
+    height: auto;
+    margin: 4% auto;
+    box-shadow: -3px 5px 15px #000;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  @media (max-width: 1200px) {
     column-count: 2;
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     column-count: 1;
   }
-}
-
-#gallery > a > img {
-  width: 100%;
-  height: auto;
-  margin: 4% auto;
-  box-shadow: -3px 5px 15px #000;
-  cursor: pointer;
-  transition: all 0.2s;
 }
 

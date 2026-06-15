@@ -2,7 +2,7 @@
 id: '18425915339'
 title: HERE, ZEGEN DEZE SPIJZE, AMEN
 slug: here-zegen-deze-spijze-amen-18425915339
-date: '2015-06-08T19:23:52+00:00'
+date: '2015-06-08T21:23:18+00:00'
 description: ''
 tags: []
 url_full: ''

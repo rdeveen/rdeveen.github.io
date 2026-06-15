@@ -2,7 +2,7 @@
 id: '37071464932'
 title: Fantôme de l'Himalaya
 slug: fantme-de-lhimalaya-37071464932
-date: '2017-09-15T15:25:00+00:00'
+date: '2017-09-12T15:02:04+00:00'
 description: |-
   Vautour fauve (Gyps fulvus)
   At Bioparc of Doué la Fontaine

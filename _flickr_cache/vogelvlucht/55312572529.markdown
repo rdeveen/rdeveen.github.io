@@ -2,7 +2,7 @@
 id: '55312572529'
 title: Huismus (Passer domesticus) - House Sparrow
 slug: huismus-passer-domesticus---house-sparrow-55312572529
-date: '2026-06-03T18:23:52+00:00'
+date: '2026-05-29T07:45:09+00:00'
 description: Een ouder voedt een jong huismus in het nest.
 tags:
 - Passer domesticus

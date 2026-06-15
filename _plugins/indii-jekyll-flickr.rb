@@ -12,6 +12,7 @@
 ##
 require 'flickr'
 require 'shellwords'
+require 'date'
 
 module Jekyll
 
@@ -189,7 +190,17 @@ module Jekyll
       # other info request
       flickr_info = photoset.flickr.photos.getInfo(:photo_id => self.id)
       if flickr_info
-        self.date = DateTime.strptime(flickr_info.dates.posted, '%s').to_s
+        begin
+          if flickr_info.dates.taken and flickr_info.dates.taken != ''
+            self.date = DateTime.parse(flickr_info.dates.taken).to_s
+          end
+        rescue ArgumentError
+          self.date = ''
+        end
+
+        if self.date == ''
+          self.date = DateTime.strptime(flickr_info.dates.posted, '%s').to_s
+        end
         self.description = flickr_info.description
         flickr_info.tags.each do |tag|
           self.tags << tag.raw
@@ -229,13 +240,28 @@ module Jekyll
       File.open(self.cache_file, 'w') {|f| f.print(YAML::dump(cached))}
     end
 
+    def formatted_date
+      return '' unless self.date and self.date != ''
+
+      begin
+        DateTime.parse(self.date).strftime('%B %-d, %Y')
+      rescue ArgumentError
+        ''
+      end
+    end
+
+    def formatted_title
+      title = self.title
+      title += " <small>" + self.description + "</small>" if self.description and self.description != ''
+      title += " (#{formatted_date})" unless formatted_date.empty?
+
+      return title
+    end
+
     def gen_thumb_html
       content = ''
       if self.url_full and self.url_thumb
-        content = "<a href=\"#{self.url_full}\" title=\"#{self.title}\"  data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" /></a>\n"
-        # if self.title and self.title != ''
-        #   content += "<figcaption>#{self.title}</figcaption>\n"
-        # end
+        content = "<a href=\"#{self.url_full}\" title=\"#{formatted_title}\" data-lightbox=\"photoset\"><img src=\"#{self.url_thumb}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo thumbnail\" /></a>"
       end
       return content
     end
@@ -243,7 +269,9 @@ module Jekyll
     def gen_full_html
       content = ''
       if self.url_full and self.url_thumb
-        content = "<p><a href=\"#{self.url_full}\" data-lightbox=\"photoset\"><img src=\"#{self.url_full}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo full\" /></a></p>\n<p>#{self.description}</p>\n"
+        content = "<p><a href=\"#{self.url_full}\" data-lightbox=\"photoset\"><img src=\"#{self.url_full}\" alt=\"#{self.title}\" title=\"#{self.title}\" class=\"photo full\" /></a></p>\n"
+        content += date_time_html('photo-date photo-date-full')
+        content += "<p>#{self.description}</p>\n"
         if self.tags
           content += "<p>Tagged <i>" + self.tags.join(", ") + ".</i></p>\n"
         end

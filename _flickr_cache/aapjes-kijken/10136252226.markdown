@@ -2,7 +2,7 @@
 id: '10136252226'
 title: Ringstaartmaki
 slug: ringstaartmaki-10136252226
-date: '2013-10-07T11:44:11+00:00'
+date: '2013-10-06T14:23:45+00:00'
 description: ''
 tags:
 - Apenheul Apen Dieren
